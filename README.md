@@ -1,8 +1,8 @@
 # BlogBackEnd
-##Install NET Core SDK 3.1.402 
+## Install NET Core SDK 3.1.402 
 https://dotnet.microsoft.com/download/dotnet-core/3.1
 
-##Run code
+## Run code
 ```bash
 cd blogbackend
 dotnet run

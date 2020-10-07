@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using BlogBackEnd.Data.Contexts;
+using Microsoft.EntityFrameworkCore;
 
 namespace BlogBackEnd
 {
@@ -26,6 +28,8 @@ namespace BlogBackEnd
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddDbContext<BlogContext>(options 
+            => options.UseSqlite(Configuration.GetConnectionString("BlogContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
